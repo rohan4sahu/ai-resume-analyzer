@@ -36,7 +36,7 @@ PROMPT=your_prompt_here
 ```
 
 ## 🔗 Live Demo
-[Check it out on Streamlit](YOUR_STREAMLIT_LINK_HERE)
+[Check it out on Streamlit](https://ai-resume-analyzer-101.streamlit.app/)
 
 ## 📌 Disclaimer
 Built using Google Gemini API for educational purposes.
