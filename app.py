@@ -1,5 +1,5 @@
 import streamlit as st
-import google.generativeai as genai
+from google import genai
 import pymupdf
 import os
 from dotenv import load_dotenv
@@ -24,7 +24,7 @@ if not GOOGLE_API_KEY:
     raise ValueError("GOOGLE_API_KEY not found. Ensure it's set in .env file.")
 
 # Configure Google Gemini API
-genai.configure(api_key=GOOGLE_API_KEY)
+client = genai.Client(api_key=GOOGLE_API_KEY)
 
 PROMPT = os.getenv("PROMPT")
 
@@ -38,9 +38,11 @@ def extract_text_from_pdf(pdf_file):
 
 # Function to analyze resume against job description
 def analyze_resume(resume_text, job_desc):
-    prompt =f"{PROMPT}\n\nResume: {resume_text}\n\nJob Description: {job_desc}"
-    model = genai.GenerativeModel("gemini-1.5-flash-latest")
-    response = model.generate_content(prompt)
+    prompt = f"{PROMPT}\n\nResume: {resume_text}\n\nJob Description: {job_desc}"
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=prompt
+    )
     return response.text
 
 def extract_match_percentage(text):
@@ -50,7 +52,6 @@ def extract_match_percentage(text):
     return None
 
 # Streamlit UI
-st.set_page_config(page_title="ATS Resume Analyzer", layout="wide")
 st.title("📄 Smart ATS Resume Analyzer")
 st.write("Check how well your resume matches a job description — powered by Google Gemini AI.")
 
