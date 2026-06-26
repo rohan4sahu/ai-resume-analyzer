@@ -40,7 +40,7 @@ def extract_text_from_pdf(pdf_file):
 def analyze_resume(resume_text, job_desc):
     prompt = f"{PROMPT}\n\nResume: {resume_text}\n\nJob Description: {job_desc}"
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         contents=prompt
     )
     return response.text
