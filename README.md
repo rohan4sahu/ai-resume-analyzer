@@ -1,48 +1,42 @@
-# 📄 AI Resume Analyzer
+# 📄 Smart ATS Resume Analyzer
 
-🚀 A powerful AI-driven ATS Resume Analyzer that compares your resume against a job description and provides a structured analysis with match percentage, skill gaps, and improvement suggestions.
+A powerful AI-driven ATS Resume Analyzer that compares your resume against a job description and provides match percentage, skill gaps, and improvement suggestions.
 
 ## 🌟 Features
 ✅ Upload PDF resumes  
 ✅ Compare with Job Descriptions  
-✅ AI-powered Analysis (Match %, Skills, Courses)  
-✅ Simple & Minimal UI like Gemini  
+✅ AI-powered Analysis (Match %, Skill Gaps, Suggestions)  
+✅ Downloadable Report  
 ✅ Powered by Google Gemini API  
 
-## 🔥 Live Demo  
-[🔗 Check it out on Streamlit](https://airesumecheck.streamlit.app/)
-
-## 🛠 Tech Stack  
+## 🛠 Tech Stack
 - **Frontend**: Streamlit  
-- **AI Model**: Google Gemini  
+- **AI Model**: Google Gemini 2.0 Flash  
 - **Backend**: Python  
 - **PDF Parsing**: PyMuPDF  
 - **Deployment**: Streamlit Cloud  
 
-## 🚀 Installation & Setup  
-1. Clone the repo  
-   ```bash
-   git clone https://github.com/yourusername/resumeanalyzer.git
-   cd resumeanalyzer
+## 🚀 Installation & Setup
+1. Clone the repo
+```bash
+   git clone https://github.com/YOURUSERNAME/ai-resume-analyzer.git
+   cd ai-resume-analyzer
+```
 2. Install Dependencies
-   ```bash
+```bash
    pip install -r requirements.txt
-3. Create a .env file and add
-   ```bash
-   GOOGLE_API_KEY=your_api_key_here
+```
+3. Create a `.env` file and add
+GOOGLE_API_KEY=your_api_key_here
+
+PROMPT=your_prompt_here
 4. Run locally
-   ```bash
+```bash
    streamlit run app.py
+```
 
-## 📸Screenshots
+## 🔗 Live Demo
+[Check it out on Streamlit](YOUR_STREAMLIT_LINK_HERE)
 
-![image](https://github.com/user-attachments/assets/8bd32772-99ff-477e-b377-dc91960313d7)
-
-
-## 🔗 Credits & Acknowledgment
-This project utilizes Google Gemini API for resume analysis and job description comparison.
-Special thanks to Google AI for providing powerful LLM capabilities.
-
-## Disclaimer
-This project is not affiliated with or endorsed by Google. It is built using the Gemini API for educational and experimental purposes.
-
+## 📌 Disclaimer
+Built using Google Gemini API for educational purposes.
