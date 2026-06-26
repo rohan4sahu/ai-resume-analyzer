@@ -11,7 +11,7 @@ A powerful AI-driven ATS Resume Analyzer that compares your resume against a job
 
 ## 🛠 Tech Stack
 - **Frontend**: Streamlit  
-- **AI Model**: Google Gemini 1.5 Flash  
+- **AI Model**: Google Gemini 2.0 Flash  
 - **Backend**: Python  
 - **PDF Parsing**: PyMuPDF  
 - **Deployment**: Streamlit Cloud  
