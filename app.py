@@ -39,7 +39,7 @@ def extract_text_from_pdf(pdf_file):
 # Function to analyze resume against job description
 def analyze_resume(resume_text, job_desc):
     prompt =f"{PROMPT}\n\nResume: {resume_text}\n\nJob Description: {job_desc}"
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-1.5-flash-latest")
     response = model.generate_content(prompt)
     return response.text
 
